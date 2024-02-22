@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background: rgb(25, 20, 17);
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: Merriweather, sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 80px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.button {
+  border-radius: 8px;
+  background: linear-gradient(135.00deg, rgb(218, 128, 35), rgb(226, 180, 56) 100%);
+  cursor: pointer;
+  border: none;
+}
+
+.button:hover {
+  background: linear-gradient(135.00deg, rgb(226, 180, 56) 0%,  rgb(218, 128, 35) 100%);
+}

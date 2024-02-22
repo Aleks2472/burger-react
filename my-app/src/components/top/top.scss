@@ -1,0 +1,64 @@
+.top {
+    background-image: url(../../../public/img/top/fon-top.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    user-select: none;
+
+    &__content {
+        padding: 103px 0 200px 0;
+        position: relative;
+    }
+
+    &__info {
+        width: 608px;
+
+        & span {
+            border-radius: 100px;
+            background: rgb(211, 50, 15);
+            font-family: Gilroy, sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 22px;
+            padding: 12px 16px;
+            display: inline-block;
+        }
+
+        & h1 {
+            font-family: Merriweather, sans-serif;
+            font-size: 120px;
+            font-weight: 600;
+            line-height: 130%;
+            margin-bottom: 56px;
+        }
+
+        & h2 {
+            font-family: Gilroy, sans-serif;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 29px;
+            margin-bottom: 56px;
+        }
+
+        & button {
+            padding: 19px 50px;
+            box-sizing: border-box;
+            font-family: Gilroy, sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 22px;
+            color: black;
+        }
+
+    }
+
+    &__my-burger {
+        width: 1286px;
+        height: 980px;
+        position: absolute;
+        top: -20px;
+        right: -273px;
+        pointer-events: none;
+    }
+
+}

@@ -1,0 +1,47 @@
+.header {
+    width: 100%;
+    padding: 40px 0;
+    box-sizing: border-box;
+    user-select: none;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__menu-list {
+        display: flex;
+        gap: 0 88px;
+    }
+
+    &__menu-item a {
+        font-family: Gilroy, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+
+        &:hover {
+            border-bottom: solid 2px white;
+        }
+
+    }
+
+    & span {
+        width: 45px;
+        height: 45px;
+        border: solid 1px white;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        & img {
+            width: 24px;
+            height: 24px;
+        }
+
+    }
+
+}

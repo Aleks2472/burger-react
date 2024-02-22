@@ -1,0 +1,25 @@
+.footer {
+    width: 100%;
+    padding: 60px 0;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & img {
+            width: 156px;
+            height: 50px;
+            pointer-events: none;
+        }
+
+        & h2 {
+            font-family: Gilroy, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+        }
+
+    }
+
+}
