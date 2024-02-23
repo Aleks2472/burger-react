@@ -8,6 +8,7 @@ function App() {
 
   const [arrayCart, setArrayCart] = React.useState([])
   const [modalActive, setModalActive] = React.useState(false)
+console.log(arrayCart)
 
   return (
     <MyContext.Provider value={{

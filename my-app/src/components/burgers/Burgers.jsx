@@ -5,21 +5,46 @@ import { MyContext } from "../../MyContext";
 
 function Burgers() {
 
-    const { setArrayCart } = React.useContext(MyContext)
+    const { arrayCart,
+        setArrayCart } = React.useContext(MyContext)
 
     const addCart = (item) => {
+        const existingCartItemIndex = arrayCart.findIndex(cartItem => cartItem.id === item.id);
 
-        const addData = {
-            id: item.id,
-            title: item.title,
-            text: item.text,
-            price: item.price,
-            gram: item.grm,
-            img: item.img
+        if (existingCartItemIndex !== -1) {
+            const updatedCart = [...arrayCart];
+            updatedCart[existingCartItemIndex].count += 1;
+            setArrayCart(updatedCart);
+        } else {
+            const addData = {
+                id: item.id,
+                title: item.title,
+                text: item.text,
+                price: item.price,
+                gram: item.grm,
+                img: item.img,
+                count: 1
+            };
+
+            setArrayCart(prevData => [...prevData, addData]);
         }
-
-        setArrayCart(prevData => [...prevData, addData]);
     }
+
+    const addCount = (item) => {
+        const updatedCart = arrayCart.map(cartItem =>
+            cartItem.id === item.id ? { ...cartItem, count: cartItem.count + 1 } : cartItem
+        );
+    
+        setArrayCart(updatedCart);
+    };
+
+    const deleteCount = (item) => {
+        const updatedCart = arrayCart.map(cartItem =>
+            cartItem.id === item.id ? { ...cartItem, count: cartItem.count - 1 } : cartItem
+        );
+    
+        setArrayCart(updatedCart);
+    };
 
     return (
         <div className="burgers">
@@ -33,10 +58,24 @@ function Burgers() {
                             <h3 className="burgers__text">{item.text}</h3>
                             <div className="burgers__functional">
                                 <div className="burgers__price">
-                                    <h2>{item.price}</h2>
+                                    <h2>{item.price} $</h2>
                                     <h3>{item.grm}</h3>
                                 </div>
-                                <button onClick={() => addCart(item)} className="button burgers__button">Заказать <img src="img/icon/cart.svg" alt="" /></button>
+                                {
+                                    arrayCart.some(cartItem => cartItem.id === item.id && cartItem.count > 0) ?
+                                        (
+                                            <div className="burgers__button-count">
+                                                <button onClick={() => deleteCount(item)}>-</button>
+                                                <span>{arrayCart.find(cartItem => cartItem.id === item.id)?.count || 0}</span>
+                                                <button onClick={() => addCount(item)}>+</button>
+                                            </div>
+                                        ) :
+                                        (
+                                            <button onClick={() => addCart(item)} className="button burgers__button">
+                                                Заказать <img src="img/icon/cart.svg" alt="" />
+                                            </button>
+                                        )
+                                }
                             </div>
                         </div>
                     ))}

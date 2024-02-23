@@ -7,6 +7,7 @@
     opacity: 0;
     transition: 0.5s 0.5s;
     pointer-events: none;
+    user-select: none;
 
     &.active {
         opacity: 1;
@@ -48,6 +49,7 @@
         padding: 0 20px;
         box-sizing: border-box;
         overflow-y: auto;
+        margin-bottom: 24px;
     }
 
     &__item {
@@ -64,6 +66,7 @@
             width: 60px;
             height: 100%;
             margin-right: 20px;
+            pointer-events: none;
         }
 
         &-title {
@@ -85,6 +88,28 @@
             font-size: 18px;
             font-weight: 500;
             line-height: 140%;
+        }
+
+    }
+
+    &__function {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 0 24px;
+
+        & h2 {
+            font-size: 32px;
+        }
+
+        & button {
+            padding: 20px 50px;
+            font-family: Gilroy, sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 22px;
         }
 
     }
