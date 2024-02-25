@@ -4,7 +4,15 @@ import { MyContext } from "../../MyContext";
 
 function Header() {
 
-    const { setModalActive } = React.useContext(MyContext)
+    const { arrayCart, setModalActive, language, setLanguage } = React.useContext(MyContext)
+    
+    const languageChange = () => {
+        if(language === 'en') {
+            setLanguage('ru')
+        } else {
+            setLanguage('en')
+        }
+    }
 
     return (
         <header className="header">
@@ -17,7 +25,7 @@ function Header() {
                         <li className="header__menu-item"><a href="#">Оформление заказа</a></li>
                     </ul>
                 </nav>
-                <span onClick={() => setModalActive(true)}><img src="img/icon/cart-white.png" alt="" /></span>
+                <span onClick={() => languageChange()}>{language}</span>
             </div>
         </header>
     )

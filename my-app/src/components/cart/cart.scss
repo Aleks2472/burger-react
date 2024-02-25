@@ -16,7 +16,7 @@
     }
 
     &__content {
-        width: 40%;
+        width: 50%;
         height: 100vh;
         border: 1px solid rgb(53, 53, 53);
         background: rgb(33, 26, 22);
@@ -83,9 +83,8 @@
         }
 
         &-count {
-            width: 45px;
             font-family: Gilroy, sans-serif;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 500;
             line-height: 140%;
         }
@@ -110,6 +109,47 @@
             font-size: 18px;
             font-weight: 500;
             line-height: 22px;
+        }
+
+    }
+
+    &__button__count {
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+
+        & button {
+            border-radius: 100%;
+            background: linear-gradient(135.00deg, rgb(218, 128, 35) 0%, rgb(226, 180, 56) 100%);
+            border: none;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            font-size: 22px;
+            display: flex;
+             align-items: center;
+             justify-content: center;
+        }
+
+    }
+
+    &__delete {
+        width: 24px; 
+        height: 24px;
+        cursor: pointer;
+        margin-left: 20px;
+    }
+
+}
+
+@media screen and (max-width: 1230px) {
+
+    .cart {
+
+        &__content {
+            width: 70vw;
         }
 
     }

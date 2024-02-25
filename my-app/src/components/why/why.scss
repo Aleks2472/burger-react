@@ -30,13 +30,25 @@
 
             & h3 {
                 font-family: Gilroy, sans-serif;
-font-size: 16px;
-font-weight: 500;
-line-height: 140%;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 140%;
             }
 
         }
 
+    }
+
+}
+
+@media screen and (max-width: 1230px) {
+
+    .why {
+
+        &__content {
+            grid-template-columns: repeat(3, 250px);
+            gap: 74px;
+        }
     }
 
 }

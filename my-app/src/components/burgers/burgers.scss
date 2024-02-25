@@ -109,3 +109,17 @@
     }
 
 }
+
+
+@media screen and (max-width: 1230px) {
+
+    .burgers {
+
+        &__content {
+            grid-template-columns: repeat(2, 384px);
+            gap: 130px;
+        }
+    }
+
+}
+

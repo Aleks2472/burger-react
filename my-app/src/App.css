@@ -44,3 +44,15 @@ body {
 .button:hover {
   background: linear-gradient(135.00deg, rgb(226, 180, 56) 0%,  rgb(218, 128, 35) 100%);
 }
+
+@media screen and (max-width: 1230px) {
+  
+  .container {
+    width: 900px !important;
+  }
+
+  .title {
+    font-size: 44px;
+  }
+
+}

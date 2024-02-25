@@ -75,3 +75,21 @@
     }
 
 }
+
+@media screen and (max-width: 1230px) {
+
+    .order {
+
+        &__form {
+            margin-left: 475px;
+            position: relative;
+            z-index: 1;
+        }
+
+        &__img {
+            left: -350px;
+        }
+
+    }
+
+}

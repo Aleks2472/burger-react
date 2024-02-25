@@ -8,14 +8,24 @@ function App() {
 
   const [arrayCart, setArrayCart] = React.useState([])
   const [modalActive, setModalActive] = React.useState(false)
-console.log(arrayCart)
+  const [language, setLanguage] = React.useState('en')
+
+  if (modalActive === true) {
+    document.body.style.overflowY = 'hidden'
+  }
+
+  if (modalActive === false) {
+    document.body.style.overflowY = 'auto'
+  }
 
   return (
     <MyContext.Provider value={{
       arrayCart,
       setArrayCart,
       modalActive,
-      setModalActive
+      setModalActive,
+      language,
+      setLanguage
     }}>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
